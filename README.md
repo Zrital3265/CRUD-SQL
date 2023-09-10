@@ -19,9 +19,14 @@ cd CRUD-SQL
 ```shell
 npm install
 ```
+then,
+
+```shell
+cd server
+```
 
 ## Configuration (database)
-index.js
+Edit index.js file (which is inside server) with your own DB Configuration.
 
 ```shell
   host: "localhost",
@@ -29,6 +34,19 @@ index.js
   password: "Your DB Password",
   database: "test",
 ```	
-You must establish a database with the name "test" or something similar.
+You must establish a database connection with the name "test" or something similar.
+
+After that(inside sever folder) hit:
+
+```shell
+npm start
+```
+then inside client folder as well hit:
+
+```shell
+npm start
+```
+***Enjoy.***
+
 
 
