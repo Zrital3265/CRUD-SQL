@@ -28,7 +28,7 @@ const Add = () => {
   console.log(book);
   return (
     <div className="form">
-      <h2>Add New Book</h2>
+      <h2>Add New Books</h2>
       <input
         type="text"
         placeholder="title"
