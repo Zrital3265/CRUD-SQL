@@ -36,12 +36,12 @@ Edit index.js file (which is inside server) with your own DB Configuration.
 ```	
 **You must establish a database connection with the name "test" or something similar.**
 
-After that(inside server folder) hit:
+After that(inside server folder) enter:
 
 ```shell
 npm start
 ```
-then inside client folder as well hit:
+then inside client folder as well enter:
 
 ```shell
 npm start
