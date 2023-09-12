@@ -1,65 +1,133 @@
-.App{
-    height: 100vh;
-    padding: 0px 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.books{
-    display: flex;
-    gap: 5px;
-}
-.book{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    gap: 2px;
-    align-items: center;
-}
-img{
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    background-color: #246ebd;    
-}
-  .delete {
-    border: 1px solid rgb(245, 191, 191);
-    color: rgb(242, 100, 100);
-  }
-  .update {
-    border: 1px solid rgb(204, 204, 243);
-    color: rgb(139, 139, 234);
-  }
-.form{
-  display: flex;
-  flex-direction: column;
-  gap:12px;
-}
-input{
-  width: 200px;
-  padding: 10px;
-  border:1px solid green;
-}
-.formButton{
-  border: none;
-  padding: 10px;
-}
-.formButton:hover{
-  background-color: #1de706;
-  font-weight: bold;
-  cursor: pointer;
+    .App{
+        height: 100vh;
+        padding: 0px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .books{
+        display: flex;
+        gap: 5px;
+    }
+    .book{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        gap: 1px;
+        align-items: center;
+    }
 
-}
-.addButton{
-  border: none;
-  padding: 10px;
-}
-.addButton:hover{
-  background-color: #1de706;
-  font-weight: bold;
-  cursor: pointer;
+    .addHome {
+      width: 120px;
+      height: 35px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
 
-}
+    .addHome:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left:-2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      
+    }
+
+    .addHome:active {
+      color: #000
+    }
+
+    .addHome:active:after {
+      background: transparent;
+    }
+
+    .addHome:hover:before {
+      opacity: 1;
+    }
+
+    .addHome:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+    @keyframes glowing {
+      0% { background-position: 0 0; }
+      50% { background-position: 400% 0; }
+      100% { background-position: 0 0; }
+    }
+
+    img{
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        background-color: #292f2a;    
+    }
+    button {
+      padding: 3px 11px ;
+      cursor: pointer;
+    }
+    button:hover{
+      border: 2px solid rgb(0, 0, 0);
+      font-weight: bolder;
+      color: rgb(255, 255, 255);
+      background-color: #000000;
+    }
+    .delete {
+      margin-bottom: 5px;
+      color: rgb(214, 134, 134);
+    }
+    .update {
+      color: rgb(69, 69, 231);
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+      gap:12px;
+    }
+    input{
+      width: 200px;
+      padding: 10px;
+      border:1px solid rgb(103, 103, 103);
+    }
+    .formButton{
+      border: none;
+      padding: 10px;
+    }
+    .formButton:hover{
+      background-color: #000000;
+      font-weight: bold;
+      cursor: pointer;
+      color:white;
+    }
+    .addButton{
+      border: none;
+      padding: 10px;
+    }
+    .addButton:hover{
+      background-color: #000000;
+      font-weight: bold;
+      cursor: pointer;
+      color:white;
+    }
