@@ -1,4 +1,4 @@
-This Zrital online bookstore was created using React.js, Node/express.js, and MySQL for CRUD operations.
+This basic E-Bookstore was created using React.js, Node/express.js, and MySQL with CRUD functionality.
 
 ### Installation:
 
